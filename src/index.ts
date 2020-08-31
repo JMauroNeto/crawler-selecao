@@ -1,5 +1,6 @@
 import axios from 'axios'
 import dotenv from 'dotenv'
+import {ProductData} from './model/ProductData'
 
 dotenv.config();
 
@@ -42,10 +43,3 @@ const getData = async(url: string): Promise<ProductData> => {
 }
 
 getData(apiUrl).then(response => console.log(response));
-
-interface ProductData{
-    titulo: string,
-    preco: number,
-    imagem: string,
-    coresDisponiveis: string[]
-}
